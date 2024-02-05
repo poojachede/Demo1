@@ -31,7 +31,7 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                 cp /home/staragile/builds/workspace/Ass2Job/target/gamutkart.war /home/staragile/apache-tomcat-9.0.85/webapps'
+              sh 'sshpass -p "staragile" cp /home/staragile/builds/workspace/Ass2Job/target/gamutkart.war /home/staragile/apache-tomcat-9.0.85/webapps'
             }
         }
     }
